@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Program18</title>
+	<script>
+		function fun() {
+			var name = document.getElementById("name").value;
+			var age = document.getElementById("age").value;
+			var email = document.getElementById("email").value;
+			document.getElementById("demo").innerHTML=name+" "+age+" "+email;
+		}
+	</script>
+</head>
+<body>
+	<label for="name">Name</label>
+	<input type="text" id="name" placeholder="Enter your name">
+	<br><br>
+	<label for="age">Age</label>
+	<input type="number" id="age" placeholder="Enter your age">
+	<br><br>
+	<label for="email">Email</label>
+	<input type="email" id="email" placeholder="Enter your email">
+	<button onclick="fun()">Click Here</button>
+	<p id="demo"></p>
+</body>
+</html>

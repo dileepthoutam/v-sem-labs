@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Program21</title>
+	<script>
+		function fun() {
+			var name = document.getElementById("name").value;
+			var age = document.getElementById("age").value;
+			var email = document.getElementById("email").value;
+			var radioBox = document.getElementsByName("gender");
+			var checkBox = document.getElementsByName("lang");
+			var v = "";
+			var s, i;
+			var locS;
+
+			for(i=0; i<radioBox.length; i++) {
+				if (radioBox[i].checked)
+					s=radioBox[i].value;
+			}
+			for(i=0; i<checkBox.length; i++) {
+				if (checkBox[i].checked)
+				v += checkBox[i].value+ " ";
+			}
+			locS = loc.options[loc.selectedIndex].value;
+			document.getElementById("demo").innerHTML = "The details filled by you are"+"<br>"+name+"<br>"+age+"<br>"+email+"<br>"+s+"<br>"+v+"<br>"+locS;
+		}
+	</script>
+</head>
+<body>
+	<label for="name">Enter your name</label>
+	<input type="text" name="name" id="name" placeholder="Enter your name">
+	<br><br>
+	<label for="age">Enter your age</label>
+	<input type="number" name="age" id="age" placeholder="Enter your age">
+	<br><br>
+	<label for="email">Enter your email</label>
+	<input type="email" name="email" id="email" placeholder="Enter your email">
+	<br><br>
+	<label for="gender">Gender</label>
+	<input type="radio" name="gender" value="male"> Male
+	<input type="radio" name="gender" value="female"> Female
+	<input type="radio" name="gender" value="lgbtq"> LGBTQ
+	<br><br>
+	<label for="lang">Languages</label>
+	<input type="checkbox" name="lang" value="C">C 
+	<input type="checkbox" name="lang" value="Python">Python 
+	<input type="checkbox" name="lang" value="TypeScript">TypeScript
+	<br><br>
+	<label for="loc">Location</label>
+	<select name="loc" id="loc">
+		<option value="Hyderabad" name="loc">Hyderabad</option>
+		<option value="Switzerland" name="loc">Switzerland</option>
+		<option value="Denmark" name="loc">Denmark</option>
+	</select>
+	<p id="demo"></p>
+	<button onclick="fun()">Submit</button>
+</body>
+</html>
