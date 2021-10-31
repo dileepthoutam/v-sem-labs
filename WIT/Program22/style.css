@@ -1,0 +1,15 @@
+i.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    padding: 20px;
+    margin: 15px;
+    background-color: grey;
+
+}
+.calc,  td {
+    border: 2px solid black;
+    margin: 5px;
+}
