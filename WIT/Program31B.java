@@ -20,5 +20,6 @@ public class Program31B {
 		c.displayA();
 		c.displayB();
 		c.displayC();
+		
 	}
 }
